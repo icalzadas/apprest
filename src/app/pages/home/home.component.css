@@ -1,0 +1,22 @@
+.quick-access {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.big-button {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 200px;
+  transition: background 0.2s ease;
+}
+
+.big-button:hover {
+  background-color: #1976d2;
+}
