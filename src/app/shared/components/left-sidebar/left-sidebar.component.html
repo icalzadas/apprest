@@ -1,0 +1,9 @@
+<nav class="left-sidebar" [class.collapsed]="collapsed">
+  <div class="menu-items">
+    <a class="menu-item" href="#">🏠</a>
+    <a class="menu-item" href="#">⚙️</a>
+  </div>
+  <div class="toggle" (click)="toggle()">
+    <span>{{ collapsed ? '❯' : '❮' }}</span>
+  </div>
+</nav>
