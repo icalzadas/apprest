@@ -3,3 +3,12 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
+:root {
+  --primary-orange: #F05A28;
+  --background-base: #fff3ef; /* Un tono suave si deseas variar */
+}
+
+.quick-access .material-symbols-outlined {
+  font-size: 50px !important;
+}

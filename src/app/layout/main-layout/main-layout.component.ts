@@ -6,7 +6,7 @@ import { LeftSidebarComponent } from '../../shared/components/left-sidebar/left-
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [TopBarComponent, LeftSidebarComponent, RouterOutlet],
+  imports: [TopBarComponent, RouterOutlet],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
 })
