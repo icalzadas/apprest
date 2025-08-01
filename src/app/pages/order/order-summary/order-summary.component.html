@@ -1,1 +1,21 @@
-<p>order-summary works!</p>
+<div class="order-summary-container">
+  <div class="items-list">
+    <div *ngFor="let item of items" class="order-item">
+      <div class="item-info">
+        <span class="item-name">{{ item.name }}</span>
+        <div class="item-controls">
+          <button (click)="decreaseQuantity(item)">−</button>
+          <span class="item-qty">{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item)">+</button>
+        </div>
+      </div>
+      <div class="item-total">
+        ${{ item.quantity * item.price }}
+      </div>
+    </div>
+  </div>
+
+  <div class="order-total">
+    <strong>TOTAL:</strong> ${{ getTotal() }}
+  </div>
+</div>

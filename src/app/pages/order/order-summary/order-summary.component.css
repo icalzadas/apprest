@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+
+.order-summary-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* padding: 1rem; */
+  background-color: #f9f9f9;
+}
+
+.items-list {
+  padding: 1rem;  
+  flex: 1;
+  overflow-y: auto;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.item-name {
+  margin-right: 1rem;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.item-controls button {
+  width: 24px;
+  height: 24px;
+  margin: 0 4px;
+}
+
+.order-total {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+}
+
