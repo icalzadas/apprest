@@ -1,0 +1,26 @@
+<div class="product-form-container">
+  <h2>Administrar Producto</h2>
+  <form (ngSubmit)="saveProduct()" #form="ngForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="product.name" name="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Categoría</mat-label>
+      <input matInput [(ngModel)]="product.category" name="category" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" [(ngModel)]="product.price" name="price" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Guardar</button>
+  </form>
+
+  <button mat-icon-button (click)="openSearchDialog()" class="search-btn">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+

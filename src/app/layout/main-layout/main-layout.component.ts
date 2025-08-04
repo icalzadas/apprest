@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainTopBarComponent } from '../../shared/components/top-bar/main-top-bar.component';
-import { LeftSidebarComponent } from '../../shared/components/left-sidebar/left-sidebar.component';
 
 @Component({
   selector: 'app-main-layout',

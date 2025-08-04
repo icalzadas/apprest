@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OrderService } from '../../../services/order.service';
 
 @Component({
   selector: 'app-order-summary',
@@ -7,23 +8,35 @@ import { CommonModule } from '@angular/common';
   templateUrl: './order-summary.component.html',
   styleUrl: './order-summary.component.css'
 })
-export class OrderSummaryComponent {
+export class OrderSummaryComponent implements OnInit {
 
-  items = [
-    { name: 'Item 1', quantity: 1, price: 50 },
-    { name: 'Item 2', quantity: 2, price: 30 }
-  ];
+  items: any[] = [];
+
+  constructor(private orderService: OrderService) {}
+
+  ngOnInit() {
+    this.orderService.orderItems$.subscribe(items => {
+      this.items = items;
+    });
+  }
 
   increaseQuantity(item: any) {
-    item.quantity++;
+    item.qty++;
+    this.orderService.updateOrder(this.items);
   }
 
   decreaseQuantity(item: any) {
-    if (item.quantity > 1) item.quantity--;
+    if (item.qty > 1) {
+      item.qty--;
+      this.orderService.updateOrder(this.items);
+    } else {
+      this.items = this.items.filter(i => i !== item);
+      this.orderService.updateOrder(this.items);
+    }
   }
 
   getTotal(): number {
-    return this.items.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+    return this.items.reduce((sum, item) => sum + (item.qty * item.price), 0);
   }
 
 }

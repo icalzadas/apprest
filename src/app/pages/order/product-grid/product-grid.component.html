@@ -1,1 +1,28 @@
-<p>product-grid works!</p>
+<div class="product-grid-container">
+  <!-- Categorías -->
+  <div class="category-tabs">
+    <button class="category" *ngFor="let cat of categories" (click)="selectCategory(cat)">
+      {{ cat.name }}
+    </button>
+  </div>
+
+  <!-- Productos -->
+  <div class="products-scroll">
+    
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <div class="product-image" (click)="selectProduct(product)">
+        <img [src]="product.image" *ngIf="product.image; else noImage" />
+        <ng-template #noImage>
+          <div class="product-name">{{ product.name }}</div>
+        </ng-template>
+      </div>
+      <div class="product-controls">
+        <button (click)="decrease(product)">−</button>
+        <span>{{ product.qty }}</span>
+        <button (click)="increase(product)">+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+

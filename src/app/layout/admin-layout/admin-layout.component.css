@@ -1,0 +1,11 @@
+.admin-layout {
+  display: flex;
+  height: calc(100vh - 50px); /* assuming topbar is 50px */
+}
+
+.admin-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
