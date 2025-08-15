@@ -1,4 +1,4 @@
-<header class="pos-topbar">
+<!-- <header class="pos-topbar">
   <div class="person-selector">
     <button (click)="decrement()">−</button>
     <span>{{ people }} persona(s)</span>
@@ -8,5 +8,20 @@
   <div class="menu-button">
     <span class="material-symbols-outlined">menu</span>
   </div>
+</header> -->
+
+
+<header class="pos-top-bar">
+  <div class="left-section">
+    <button class="hamburger-btn">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <div class="person-selector">
+      <button (click)="decrement()">-</button>
+      <span>{{ people }} persona(s)</span>
+      <button (click)="increment()">+</button>
+    </div>
+  </div>
 </header>
+
 

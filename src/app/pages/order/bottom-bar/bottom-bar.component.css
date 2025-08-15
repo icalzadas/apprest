@@ -4,8 +4,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
-  background-color: green;
-  border-top: 1px solid #ddd;
+  background-color: #f9f9f9; /* Fondo de la sección productos */
+  border-top: 4px solid #F05A28; /* Borde superior decorativo */
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
 }
 
 .button-container {
@@ -13,20 +16,29 @@
   height: 100%;
 }
 
-.action-button {
+.cancel-button, .send-button {
   height: 100%;
-  padding: 0 1.5rem;
-  background-color: green;
-  color: white;
+  padding: 0 2rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-  border-left: 1px solid white;
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Botón Cancelar */
+.cancel-button {
+  background-color: white;
+  color: #F05A28;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Botón Enviar */
+.send-button {
+  background-color: #F05A28;
+  color: white;
 }
 
 

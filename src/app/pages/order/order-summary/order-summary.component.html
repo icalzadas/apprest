@@ -1,4 +1,4 @@
-<div class="order-summary-container">
+<!-- <div class="order-summary-container">
   <div class="items-list">
     <div *ngFor="let item of items" class="order-item">
       <div class="item-info">
@@ -18,4 +18,29 @@
   <div class="order-total">
     <strong>TOTAL:</strong> ${{ getTotal() }}
   </div>
+</div> -->
+
+
+<div class="order-summary">
+  <h3 class="section-title">Your Order</h3>
+
+  <div class="order-items">
+    <div class="order-item" *ngFor="let item of items">
+      <span class="item-name">{{ item.name }}</span>
+      
+      <div class="item-controls">
+        <button (click)="decreaseQuantity(item)">-</button>
+        <span>{{ item.qty }}</span>
+        <button (click)="increaseQuantity(item)">+</button>
+      </div>
+
+      <span class="item-price">${{ item.total | number:'1.2-2' }}</span>
+    </div>
+  </div>
+
+  <div class="order-total">
+    <div class="total-label">Total</div>
+    <div class="total-price">${{ getTotal() | number:'1.2-2' }}</div>
+  </div>
 </div>
+

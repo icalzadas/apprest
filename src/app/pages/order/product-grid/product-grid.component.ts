@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrderService } from '../../../services/order.service';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-product-grid',
-  imports: [CommonModule],
+  imports: [CommonModule, MatTabsModule],
   templateUrl: './product-grid.component.html',
   styleUrl: './product-grid.component.css'
 })

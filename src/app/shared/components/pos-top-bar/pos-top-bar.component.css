@@ -1,11 +1,27 @@
-.pos-topbar {
-  background-color: #f05a28;
-  color: white;
-  height: 50px;
+.pos-top-bar {
+  background-color: white; /* o el color claro que decidas */
+  height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
   justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .person-selector {
@@ -15,31 +31,12 @@
 }
 
 .person-selector button {
-  background: white;
-  color: #f05a28;
+  background-color: #F05A28;
+  color: white;
   border: none;
   border-radius: 4px;
-  padding: 0.2rem 0.5rem;
-  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
-.categories {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.category {
-  background: white;
-  color: #f05a28;
-  border: none;
-  border-radius: 4px;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.menu-button {
-  font-size: 1.8rem;
-  cursor: pointer;
-}

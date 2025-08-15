@@ -1,12 +1,12 @@
-<div class="product-grid-container">
-  <!-- Categorías -->
+<!-- <div class="product-grid-container">
+  
   <div class="category-tabs">
     <button class="category" *ngFor="let cat of categories" (click)="selectCategory(cat)">
       {{ cat.name }}
     </button>
   </div>
 
-  <!-- Productos -->
+  
   <div class="products-scroll">
     
     <div class="product-card" *ngFor="let product of filteredProducts">
@@ -21,6 +21,30 @@
         <span>{{ product.qty }}</span>
         <button (click)="increase(product)">+</button>
       </div>
+    </div>
+
+  </div>
+</div> -->
+
+<mat-tab-group class="category-tabs" [(selectedIndex)]="selectCategory">
+  <mat-tab *ngFor="let category of categories" [label]="category.name"></mat-tab>
+</mat-tab-group>
+
+<div class="products-grid">
+  <div 
+    class="product-card" 
+    *ngFor="let product of filteredProducts" 
+    (click)="selectProduct(product)">
+    
+    <div class="product-info">
+      <div class="product-name">{{ product.name }}</div>
+      <!-- Aquí puedes agregar una imagen si tienes -->
+    </div>
+
+    <div class="product-controls">
+      <button (click)="decrease(product); $event.stopPropagation()">-</button>
+      <span>{{ product.qty }}</span>
+      <button (click)="increase(product); $event.stopPropagation()">+</button>
     </div>
 
   </div>
